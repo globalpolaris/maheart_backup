@@ -24,18 +24,18 @@ body {
 }
 
 h2 {
-    margin: -12px 0 0 45px;
+    margin: -12px 0 0 40px;
     display: grid;
     align-items: center;
     border-radius: 13px;
     text-align: center;
 
-    width: 125px;
+    width: 145px;
     height: 25px;
     background-color: #ee6f57;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .display-name {
@@ -124,6 +124,9 @@ h2 {
 #btn1:focus, #btn2:focus {
     background-color: #f79a88 !important;
 }
+
+
+
 
 /*responsive*/
 

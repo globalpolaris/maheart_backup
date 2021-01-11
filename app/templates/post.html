@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href={{ url_for('static', filename='css/post.css') }}>
+<div class="post-popup">
+    <form action="" method="POST">
+        {{ form.csrf_token }}
+        <p>{{ form.post.label }}</p><br>
+        {{ form.post(class_='post', size=255) }}<br>
+        {{ form.submit(class_='submit') }}
+        {% for error in form.post.errors %}
+      <p class="abc" id="two" style="color: red;">{{ error }}</p>
+      <style>
+        .password {border: 1px solid red; outline:none;}
+      </style> 
+      {% endfor %}
+    </form>
+</div>
+{% endblock %}
+

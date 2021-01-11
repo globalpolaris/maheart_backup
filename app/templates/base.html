@@ -21,7 +21,7 @@
             {% if current_user.is_anonymous %}
                 <li><a href="{{ url_for('login') }}">Sign In</a></li>
             {% else %}
-                <li><a href="#">Tulis Curhatan</a></li>
+                <li><a href="{{ url_for('posts') }}">Tulis Curhatan</a></li>
             {% endif %}
         </ul>
         <div class="menu-toggle">
@@ -43,6 +43,7 @@
         </div>
         {% endif %}
     </nav>
+
 
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     {% block content %}

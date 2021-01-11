@@ -1,0 +1,34 @@
+
+{% extends "base.html" %} {% block content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/login.css') }}"
+/>
+<div class="login-card">
+  <h1 class="text">Sign In</h1>
+  <form action="" method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.username(class_='uname', size=32) }}<br />
+    {% for error in form.username.errors %}
+    <p class="abc" style="color: red;">{{ error }}</p><br>
+    <style>
+      .uname {border: 1px solid red; outline:none;}
+    </style>  
+    {% endfor %}
+      {{ form.password(class_='password', size=32) }}<br />
+      {% for error in form.password.errors %}
+      <p class="abc" id="two" style="color: red;">{{ error }}</p>
+      <style>
+        .password {border: 1px solid red; outline:none;}
+      </style> 
+      {% endfor %}
+    <!-- <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p> -->
+    <a class="forp" href="#">Forgot password?</a>
+    {% for message in get_flashed_messages() %}
+      <p class="error-msg">{{ message }}</p>
+    {% endfor %}
+    <p>{{ form.submit(class_='submit') }}</p>
+    <p class="dha">Don't have account? <a href="{{ url_for('signup') }}">Sign Up</a></p>
+  </form>
+</div>
+{% endblock %}

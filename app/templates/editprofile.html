@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/editprofile.css') }}">
+<div class="edit-profile">
+
+    <h1>Edit Profile</h1>
+    <form action="" method="POST">
+      {{ form.hidden_tag() }}
+    
+      <p>{{ form.username.label }}</p><br />
+      {{ form.username(class_='uname',size=32) }}<br />
+      {% for error in form.username.errors %}
+      <p class="abc" id="two" style="color: red">{{ error }}</p>
+      {% endfor %}
+    
+      <p>{{ form.display_name.label }}</p><br />
+      {{ form.display_name(class_='dname', size=32) }}<br />
+      {% for error in form.display_name.errors %}
+      <p class="abc" id="two" style="color: red">{{ error }}</p>
+      {% endfor %}
+    
+      {{ form.submit(class_='submit') }}
+    </form>
+    {% for message in get_flashed_messages() %}
+      <span class="error-msg">{{ message }}</span>
+    {% endfor %}
+</div>
+
+{% endblock %}

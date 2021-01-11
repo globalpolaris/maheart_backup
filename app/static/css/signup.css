@@ -1,0 +1,207 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Yellowtail&display=swap');
+
+.signup-card {
+    display: flex;
+    background-color: #ffffff;
+    width: 475px;
+    height: 730px;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 75px auto;
+    border-radius: 49px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    box-shadow: 5px 8px 20px rgb(41, 41, 41);
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #000000;
+    margin: 15px 0px 2px 98px;
+    display: flex;
+}
+
+h1{
+    font-family: 'Yellowtail', cursive;
+    margin: 25px auto;
+    color: #ee6f57;
+    font-size: 80px;
+    /* text-shadow: 2px 2px 15px black; */
+}
+
+.uname {
+    width: 314px;
+    height: 40px;
+    border-radius: 23px;
+    border-width: 1px;
+    padding: 3px 0 3px 15px;
+    margin: 0px 0 10px auto;
+    outline:none;
+}
+
+
+.uname:focus {
+    outline: none !important;
+    border: 1px solid #ee6f57;
+}
+
+.disname {
+    width: 314px;
+    height: 40px;
+    border-radius: 23px;
+    border-width: 1px;
+    padding: 3px 0 3px 15px;
+    margin: 0px 0 10px auto;
+    outline:none;
+}
+
+.disname:focus {
+    outline: none !important;
+    border: 1px solid #ee6f57;
+}
+
+.passw1 {
+    width: 314px;
+    height: 40px;
+    border-radius: 23px;
+    border-width: 1px;
+    padding: 3px 0 3px 15px;
+    margin: 0px 0 10px auto;
+    /* border-style: none; */
+    /* border:0px; */
+    outline: none;
+}
+
+.passw1:focus {
+    outline: none !important;
+    border: 1px solid #ee6f57;
+}
+
+.email {
+    width: 314px;
+    height: 40px;
+    border-radius: 23px;
+    border-width: 1px;
+    padding: 3px 0 3px 15px;
+    margin: 0px 0 10px auto;
+    /* border-style: none; */
+    /* border:0px; */
+    outline: none;
+}
+
+.email:focus {
+    outline: none !important;
+    border: 1px solid #ee6f57;
+}
+
+.submit {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    width: 314px;
+    height: 41px;
+    color: #ffffff;
+    border-radius: 22px;
+    border-style: none;
+    background-color: #ee6f57;
+    margin-top: 25px;
+    outline: none;
+}
+
+.abc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 0;
+    display: flex;
+    margin: -5px 0 -20px 98px;
+}
+
+.def {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 0;
+    display: flex;
+    margin: -5px 0 -20px 98px;
+}
+
+
+/*RESPONSIVE BREAK*/
+
+@media screen and (max-width: 576px) {
+    body{
+        overflow-y: visible;
+    }
+    .signup-card {
+        margin: 50px auto;
+        width: 275px;
+        height: 550px;
+        z-index: -2;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin: 15px auto;
+    }
+
+    p {
+        margin: 5px 0px -8px 50px;
+    }
+
+    .uname {
+        font-size: 12px;
+        width: 200px;
+        height: 30px;
+        margin: 15px 0 10px auto;
+    }
+
+    .disname {
+        font-size: 12px;
+        width: 200px;
+        height: 30px;
+        margin: 15px 0 10px auto;
+    }
+
+    .email {
+        font-size: 12px;
+        width: 200px;
+        height: 30px;
+        margin: 15px 0 10px auto;
+    }
+
+    .passw1 {
+        font-size: 12px;
+        width: 200px;
+        height: 30px;
+        margin: 10px 0 10px auto;
+    }
+
+    .submit {
+        width: 200px;
+        height: 35px;
+        font-size: 14px;
+        margin-top: 25px;
+    }
+    .abc {
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+        padding: 0 0;
+        display: flex;
+        margin: -3px 0 -15px 40px;
+    }
+    .def {
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+        padding: 0 0;
+        display: flex;
+        margin: -3px 0 -15px 40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .signup-card {
+        margin: 120px auto;
+    }
+}

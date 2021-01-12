@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 <div class="wrapper">
     {% for p in posts %}
     <div class="post">
         <h2>{{ p.timestamp|format_datetime('full') }}</h2>
+        {% if p.author == current_user %}
+            {% include "_dropdown.html" %}
+        {% endif %}
         <div class="display-name">{{ p.author.display_name }}</div>
         <div class="line123"/></div>
         <div class="line123"/></div>
@@ -34,6 +38,5 @@
         </div>
     </div>
     {% endfor %}
-    <!-- <script src="{{ url_for('static', filename='js/modal.js') }}"></script> -->
 </div>
 {% endblock %}

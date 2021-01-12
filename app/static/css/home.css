@@ -1,165 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Yellowtail&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Yellowtail&display=swap");
 
 body {
-    overflow-y: visible;
+  overflow-y: visible;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 35px 250px 35px 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 35px 250px 35px 260px;
 }
 
 .post {
-    position: relative;
-    margin: 35px 25px;
-    display: flex;
-    background-color: #fff;
-    flex-direction: column;
-    height: 320px;
-    width: 222px;
-    border-radius: 33px;
+  position: relative;
+  margin: 35px 25px;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  height: 320px;
+  width: 222px;
+  border-radius: 33px;
 }
 
 h2 {
-    margin: -12px 0 0 40px;
-    display: grid;
-    align-items: center;
-    border-radius: 13px;
-    text-align: center;
+  margin: -12px 0 0 40px;
+  display: grid;
+  align-items: center;
+  border-radius: 13px;
+  text-align: center;
 
-    width: 145px;
-    height: 25px;
-    background-color: #ee6f57;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+  width: 145px;
+  height: 25px;
+  background-color: #ee6f57;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 
 .display-name {
-    position: relative;
-    font-family: 'Roboto', sans-serif;
-    margin: 25px 0 15px 10px;
-    font-size: 18px;
-    font-weight: bolder;
-    z-index: 3;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  margin: 25px 0 15px 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  z-index: 3;
 }
 
-.text{
-    position: relative;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    line-height: 125%;
-    margin-left: 10px;
-    top: -220px;
-    margin-right: 10px;
-
+.text {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 125%;
+  margin-left: 10px;
+  top: -220px;
+  margin-right: 10px;
 }
 
 .post .time {
-    opacity: 60%;
-    position: absolute;
-    bottom: 50px;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    margin: 20px 0 0 10px;
+  opacity: 60%;
+  position: absolute;
+  bottom: 50px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  margin: 20px 0 0 10px;
 }
 
 .emote1 {
-    position: absolute;
-    align-self: center;
-    bottom: -5px;
-    border-radius: 33px;
-    padding: 25px 15px;
-    background-color: rgb(142, 142, 253);
+  position: absolute;
+  align-self: center;
+  bottom: -5px;
+  border-radius: 33px;
+  padding: 25px 15px;
+  background-color: rgb(142, 142, 253);
 }
 
 .line123 {
-    top: -15px;
-    position: relative;
-    align-self: center;
-    width: 200px;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: -2px 0;
-    padding: 10px;
+  top: -15px;
+  position: relative;
+  align-self: center;
+  width: 200px;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: -2px 0;
+  padding: 10px;
 }
 
 .btn-group {
-    position: absolute;
-    bottom: 25px;
-    height: 5px;    
-    align-self: center;
-    align-items: center;
-    background-color: #ccc !important;
-    width: 150px;
+  position: absolute;
+  bottom: 25px;
+  height: 5px;
+  align-self: center;
+  align-items: center;
+  background-color: #ccc !important;
+  width: 150px;
 }
 
 #btn1 {
-    border: none;
-    border-top-left-radius: 33px !important;
-    border-bottom-left-radius: 33px !important;
-    background-color: #8d8d8d !important;
+  border: none;
+  border-top-left-radius: 33px !important;
+  border-bottom-left-radius: 33px !important;
+  background-color: #8d8d8d !important;
 }
 
 #btn2 {
-    border: none;
-    border-top-right-radius: 33px !important;
-    border-bottom-right-radius: 33px !important;
-    background-color: #8d8d8d !important;
+  border: none;
+  border-top-right-radius: 33px !important;
+  border-bottom-right-radius: 33px !important;
+  background-color: #8d8d8d !important;
 }
 
-#btn1:hover, #btn2:hover {
-    background-color: #636363 !important;
+#btn1:hover,
+#btn2:hover {
+  background-color: #636363 !important;
 }
 
-#btn1, #btn2 {
-    outline: none !important;
-    box-shadow: none;
+#btn1,
+#btn2 {
+  outline: none !important;
+  box-shadow: none;
 }
 
-#btn1:focus, #btn2:focus {
-    background-color: #f79a88 !important;
+#btn1:focus,
+#btn2:focus {
+  background-color: #f79a88 !important;
 }
-
-
 
 
 /*responsive*/
 
 @media screen and (max-width: 576px) {
-    .wrapper{
-        /* flex-direction: row; */
-        /* align-items: center; */
-        /* margin: 35px 0 35px 50px; */
+  .wrapper {
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* margin: 35px 0 35px 50px; */
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 0 0;
-    }
-    .post {
-        display: flex;
-        align-self: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0;
+  }
+  .post {
+    display: flex;
+    align-self: center;
+  }
+  .jatuh-content {
+    margin: 40px 0 0 130px;
+  }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 577px){
-    
-    .wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    .post {
-        margin-left: 50px;
-        align-self: center;
-    }
+@media screen and (max-width: 1024px) and (min-width: 577px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .post {
+    margin-left: 50px;
+    align-self: center;
+  }
 }

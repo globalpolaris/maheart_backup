@@ -34,6 +34,15 @@ class EditProfileForm(FlaskForm):
     display_name = StringField('Display name', validators=[Length(max=32), DataRequired()])
     submit = SubmitField('Save')
 
+    def validate_username(self, username):
+        user = User.query.filter_by(username=username.data).first()
+        if user is not None:
+            raise ValidationError('Username already exists')
+
 class PostForm(FlaskForm):
     post = StringField('Post', validators=[Length(min=1,max=255),DataRequired()], render_kw={'placeholder':'Ceritakan ceritamu...'})
     submit = SubmitField('Send')
+
+class EditPostForm(FlaskForm):
+    post = StringField('Edit Post', validators=[Length(max=255), DataRequired()])
+    save = SubmitField('Save')

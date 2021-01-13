@@ -1,7 +1,7 @@
 
 from app import app, fa
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm, RegistrationForm,  EditProfileForm, PostForm
+from app.forms import LoginForm, RegistrationForm,  EditProfileForm, PostForm, EditPostForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, db, Post
 from werkzeug.urls import url_parse
@@ -84,3 +84,13 @@ def format_datetime(value, format='medium'):
     elif format == 'medium':
         format="HH:mm"
     return babel.dates.format_datetime(value, format)
+
+@app.route('/edit-post', methods=['GET', 'POST'])
+def edit_post():
+    jojo = EditPostForm()
+    for p in current_user.posts:
+        if jojo.validate_on_submit():
+            p.body = jojo.post.data
+        elif request.method == 'GET':
+            jojo.post.data = p.body
+    return render_template('_dropdown.html', title='Edit Post', jojo=jojo)

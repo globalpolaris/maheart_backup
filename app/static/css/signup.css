@@ -147,7 +147,7 @@ h1{
     }
 
     p {
-        margin: 5px 0px -8px 50px;
+        margin: 5px 0px -20px 50px;
     }
 
     .uname {
@@ -175,7 +175,7 @@ h1{
         font-size: 12px;
         width: 200px;
         height: 30px;
-        margin: 10px 0 10px auto;
+        margin: 15px 0 10px auto;
     }
 
     .submit {

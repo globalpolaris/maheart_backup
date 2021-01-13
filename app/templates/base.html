@@ -31,7 +31,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h4>MaHeart</h4>
+            <h4>Dailee</h4>
         </div>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -40,10 +40,10 @@
                 <li><a href="{{ url_for('login') }}">Sign In</a></li>
             {% else %}
                 <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postModal">
-                    Launch demo modal</button>
+                    Write Post</button>
                 </li>
             {% endif %}
-            <li><a href="#">About Us</a></li>
+            <li><a href="#">About</a></li>
             
         </ul>
 
@@ -61,7 +61,7 @@
         <div class="modal-body">
             <form action="{{ url_for('write') }}" method="POST">
                 <div class="form-group">
-                    <label  for="exampleFormControlTextarea1">Example textarea</label>
+                    <label  for="exampleFormControlTextarea1" style="color: black;">Your Story:</label>
                     <textarea name="post1" class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="255" minlength="1"></textarea>
                 </div>
         </div>

@@ -36,12 +36,19 @@ nav .logo {
 nav ul {
   display: flex;
   list-style: none;
+  align-items: center;
   width: 30%;
   justify-content: space-between;
   margin: 0;
 }
 
+/* nav ul li {
+  d
+} */
+
 nav ul li a {
+  display: grid;
+  align-self: center;
   text-decoration: none;
   color: #f6f5f5;
   font-family: "Montserrat", sans-serif;
@@ -200,6 +207,10 @@ nav .signup:hover {
     z-index: 1;
   }
 
+  nav h4 {
+    font-size: 1.2em;
+  }
+
   nav ul {
     position: absolute;
     flex-direction: column;
@@ -211,6 +222,15 @@ nav .signup:hover {
     align-items: center;
     background-color: #070d59;
     transform: translateY(-100%);
+  }
+
+  nav .signup {
+    padding: 2px 15px;
+  }
+
+  nav ul li {
+    display: flex;
+    margin: 0 0 0 -30px;
   }
 
   nav ul.slide {

@@ -11,6 +11,7 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 Migrate = Migrate(app, db)
 login = LoginManager(app)
+login.login_view = 'login'
 fa = FontAwesome(app)
 
-from app import routes, models
+from app import routes, models, error_handler

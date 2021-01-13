@@ -158,7 +158,7 @@ nav .signup:hover {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   right: 0;
   transition: all 0.5s;
-  z-index: 1;
+  z-index: 2;
 }
 .fas {
   background-color: none;
@@ -195,6 +195,9 @@ nav .signup:hover {
   .menu-toggle {
     display: flex;
     z-index: 3;
+  }
+  .menu-toggle input {
+    z-index: 1;
   }
 
   nav ul {

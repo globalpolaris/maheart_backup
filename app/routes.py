@@ -84,7 +84,9 @@ def format_datetime(value, format='medium'):
 @login_required
 @app.route('/delete/<int:id>', methods=['POST'])
 def remove(id):
-    object = Post.query.filter_by(id=id).first_or_404()
+    object = Post.query.get_or_404(id)
+    if object.author != current_user:
+        abort(403)
     db.session.delete(object)
     db.session.commit()
     return redirect(url_for('index'))

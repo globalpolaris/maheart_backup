@@ -5,6 +5,7 @@
 href="{{ url_for('static', filename='css/drop.css') }}" >
 
 
+<!-- {% for po in pos %} -->
 <div class="butt btn-group">
     <button
     type="button"
@@ -12,6 +13,7 @@ href="{{ url_for('static', filename='css/drop.css') }}" >
     data-mdb-toggle="dropdown"
     aria-expanded="false"
     >
+    asd
 </button>
 <ul class="dropdown-menu dropdown-menu-end">
     <li>
@@ -22,9 +24,8 @@ href="{{ url_for('static', filename='css/drop.css') }}" >
     </li>
 </ul>
 
-{% for po in current_user.posts %}
 <!-- The Modal -->
-<div class="modal" id="{{ po.id }}">
+<div class="modal" id="123">
     <div class="modal-dialog">
       <div class="modal-content">
   
@@ -36,7 +37,7 @@ href="{{ url_for('static', filename='css/drop.css') }}" >
   
         <!-- Modal body -->
         <div class="modal-body">
-          {{ jojo.post }}
+          Testasddas
         </div>
   
         <!-- Modal footer -->
@@ -48,9 +49,9 @@ href="{{ url_for('static', filename='css/drop.css') }}" >
     </div>
 </div>
 
-{% endfor %}
 <!-- <script src="{{ url_for('static', filename='js/modal.js') }}"></script> -->
 </div>
+<!-- {% endfor %} -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

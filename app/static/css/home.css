@@ -24,13 +24,13 @@ body {
 }
 
 h2 {
-  margin: -12px 0 0 40px;
+  margin: -12px 0 0 20px;
   display: grid;
   align-items: center;
   border-radius: 13px;
   text-align: center;
 
-  width: 145px;
+  width: 180px;
   height: 25px;
   background-color: #ee6f57;
   color: #fff;

@@ -43,6 +43,5 @@ class PostForm(FlaskForm):
     post = StringField('Post', validators=[Length(min=1,max=255),DataRequired()], render_kw={'placeholder':'Ceritakan ceritamu...'})
     submit = SubmitField('Send')
 
-class EditPostForm(FlaskForm):
-    post = StringField('Edit Post', validators=[Length(max=255), DataRequired()])
-    save = SubmitField('Save')
+class DeletePost(FlaskForm):
+    delete = SubmitField('Delete')

@@ -1,7 +1,7 @@
 
 from app import app, fa
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm, RegistrationForm,  EditProfileForm, PostForm, EditPostForm
+from app.forms import LoginForm, RegistrationForm,  EditProfileForm, PostForm, DeletePost
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, db, Post
 from werkzeug.urls import url_parse
@@ -73,7 +73,6 @@ def posts():
         p = Post(body=form.post.data, author=current_user)
         db.session.add(p)
         db.session.commit()
-        flash('Ceritamu telah dikirim')
         return redirect(url_for('index'))
     return render_template('post.html', title='Post', form=form)
 
@@ -85,12 +84,10 @@ def format_datetime(value, format='medium'):
         format="HH:mm"
     return babel.dates.format_datetime(value, format)
 
-@app.route('/edit-post', methods=['GET', 'POST'])
-def edit_post():
-    jojo = EditPostForm()
-    for p in current_user.posts:
-        if jojo.validate_on_submit():
-            p.body = jojo.post.data
-        elif request.method == 'GET':
-            jojo.post.data = p.body
-    return render_template('_dropdown.html', title='Edit Post', jojo=jojo)
+@login_required
+@app.route('/delete/<int:id>', methods=['POST'])
+def remove(id):
+    object = Post.query.get_or_404(id)
+    db.session.delete(object)
+    db.session.commit()
+    return redirect(url_for('index'))

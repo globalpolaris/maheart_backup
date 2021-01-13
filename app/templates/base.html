@@ -38,13 +38,41 @@
         </div>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href=#>Curhatan Top</a></li>
+            <!-- <li><a href=#>Curhatan Top</a></li> -->
             {% if current_user.is_anonymous %}
                 <li><a href="{{ url_for('login') }}">Sign In</a></li>
             {% else %}
-                <li><a href="{{ url_for('posts') }}">Tulis Curhatan</a></li>
+                <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postModal">
+                    Launch demo modal
+                  </button></li>
             {% endif %}
         </ul>
+
+
+       <!-- Modal -->
+<div class="modal" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle" style="color: black !important;">Write Post</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="{{ url_for('write') }}" method="POST">
+                <input name='post1' type="text">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
         <div class="menu-toggle">
             <input type="checkbox">
             <span></span>

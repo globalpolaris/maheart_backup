@@ -65,16 +65,13 @@ def edit_profile():
         form.display_name.data = current_user.display_name
     return render_template('editprofile.html', title='Edit Profile', form=form)
     
-@app.route('/posts', methods=['GET','POST'])
 @login_required
-def posts():
-    form = PostForm()
-    if form.validate_on_submit():
-        p = Post(body=form.post.data, author=current_user)
-        db.session.add(p)
-        db.session.commit()
-        return redirect(url_for('index'))
-    return render_template('post.html', title='Post', form=form)
+@app.route('/write', methods=['POST'])
+def write():
+    pos = request.form.get('post1')
+    db.session.add(Post(body=pos, author=current_user))
+    db.session.commit()
+    return redirect(url_for('index'))
 
 @app.template_filter()
 def format_datetime(value, format='medium'):

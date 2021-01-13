@@ -25,9 +25,6 @@
     outline: none !important;
 }
 
-.dr:focus {
-    /* color:  rgb(61, 61, 61) !important; */
-}
 
 .dropdown-menu {
     font-family: 'Roboto', sans-serif;

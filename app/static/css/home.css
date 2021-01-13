@@ -44,7 +44,6 @@ h2 {
   margin: 25px 0 15px 10px;
   font-size: 18px;
   font-weight: bolder;
-  z-index: 3;
 }
 
 .text {
@@ -141,13 +140,20 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     margin: 0 0;
+    /* z-index: 1; */
   }
   .post {
     display: flex;
     align-self: center;
+    z-index: 1;
   }
   .jatuh-content {
     margin: 40px 0 0 130px;
+  }
+
+ 
+  .modal-backdrop.show {
+    position: inherit;
   }
 }
 

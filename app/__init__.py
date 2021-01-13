@@ -15,3 +15,6 @@ login.login_view = 'login'
 fa = FontAwesome(app)
 
 from app import routes, models, error_handler
+
+def getApp():
+    return app

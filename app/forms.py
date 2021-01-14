@@ -31,7 +31,7 @@ class RegistrationForm(FlaskForm):
 
 class EditProfileForm(FlaskForm):
     username = StringField('Username', validators=[Length(max=32)])
-    display_name = StringField('Display name', validators=[Length(max=32), DataRequired()])
+    display_name = StringField('Display name', validators=[Length(max=32)])
     submit = SubmitField('Save')
 
     def validate_username(self, username):

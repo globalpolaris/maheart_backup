@@ -24,7 +24,7 @@ h1 {
 p {
     display: flex;
   font-family: "Montserrat", sans-serif;
-  margin: 25px 0 5px 20px;
+  margin: 25px 0 -15px 20px;
 }
 
 .uname,
@@ -34,7 +34,7 @@ p {
   border-radius: 23px;
   border-width: 1px;
   padding: 3px 0 3px 15px;
-  margin: -25px 0 0 auto;
+  margin: -25px 0 -15px auto;
   outline: none;
   font-size: 14px;
 }
@@ -65,13 +65,18 @@ p {
   cursor: pointer;
 }
 
-.error-msg {
+#two {
   text-align: center;
   color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  margin: 20px auto 0 110px;
+  margin: 15px auto 0 10px;
   font-weight: 500;
+}
+
+.error-msg {
+  font-family: "Roboto", sans-serif;
+  margin-top: 15px
 }
 
 /*responsive*/

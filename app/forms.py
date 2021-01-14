@@ -34,6 +34,7 @@ class EditProfileForm(FlaskForm):
     display_name = StringField('Display name', validators=[Length(max=32)])
     submit = SubmitField('Save')
 
+
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
         if user is not None:

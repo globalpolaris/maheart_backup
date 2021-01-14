@@ -30,7 +30,7 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Email already taken')
 
 class EditProfileForm(FlaskForm):
-    username = StringField('Username', validators=[Length(max=32), DataRequired()])
+    username = StringField('Username', validators=[Length(max=32)])
     display_name = StringField('Display name', validators=[Length(max=32), DataRequired()])
     submit = SubmitField('Save')
 

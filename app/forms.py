@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Length
+from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Length, Optional
 from app.models import User
 from wtforms.widgets.core import Select, html_params
 
@@ -30,10 +30,9 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Email already taken')
 
 class EditProfileForm(FlaskForm):
-    username = StringField('Username', validators=[Length(max=32)])
+    username = StringField('Username', validators=[Length(max=32), Optional()], render_kw={'placeholder':'New username'})
     display_name = StringField('Display name', validators=[Length(max=32)])
     submit = SubmitField('Save')
-
 
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()

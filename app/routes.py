@@ -55,7 +55,8 @@ def signup():
 def edit_profile():
     form = EditProfileForm()
     if form.validate_on_submit():
-        current_user.username = form.username.data
+        if form.username.data is not None:
+            current_user.username = form.username.data
         current_user.display_name = form.display_name.data
         db.session.commit()
         flash('Your changes has been saved!')

@@ -41,7 +41,7 @@ class EditProfileForm(FlaskForm):
                 raise ValidationError('Username already exists')
 
 class PostForm(FlaskForm):
-    post = StringField('Post', validators=[Length(min=1,max=255),DataRequired()], render_kw={'placeholder':'Ceritakan ceritamu...'})
+    post = StringField('Post', validators=[DataRequired(), Length(min=1,max=255)], render_kw={'placeholder':'Ceritakan ceritamu...'})
     submit = SubmitField('Send')
 
 class DeletePost(FlaskForm):

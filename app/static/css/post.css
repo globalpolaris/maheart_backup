@@ -1,14 +1,18 @@
+body {
+    overflow-y: scroll;
+    height: 100%;
+}
+
 .post-popup {
-    width: 475px;
-    height: 500px;
-    text-align: center;
+    width: 1500px;
+    height: 1500px;
     background-color: #ffffff;
-    margin: 150px auto;
-    border-radius: 49px;
+    margin: 50px auto;
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    box-shadow: 5px 8px 20px rgb(41, 41, 41);
+    /* box-shadow: 5px 8px 20px rgb(41, 41, 41); */
 }
 
 p {
@@ -16,7 +20,7 @@ p {
 }
 
 .post {
-    width: 314px;
+    width: 80vh;
     height: 400px;
     border-radius: 23px;
     border-width: 1px;

@@ -21,9 +21,10 @@ body {
   height: 320px;
   width: 222px;
   border-radius: 33px;
+
 }
 
-h2 {
+.redirect {
   margin: -12px 0 0 20px;
   display: grid;
   align-items: center;
@@ -36,6 +37,7 @@ h2 {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  
 }
 
 .display-name {
@@ -59,7 +61,7 @@ h2 {
 .post .time {
   opacity: 60%;
   position: absolute;
-  bottom: 65px;
+  bottom: 66px;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   margin: 20px 0 0 10px;

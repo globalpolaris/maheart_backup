@@ -13,7 +13,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h4>Dailee</h4>
+            <a href="{{ url_for('index') }}">Dailee</a>
         </div>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -42,6 +42,7 @@
         </div>
         <div class="modal-body">
           <form action="{{ url_for('write') }}" method="POST">
+            {{ csrf_token }}
             <div class="form-group">
               <label  for="exampleFormControlTextarea1" style="color: black;">Your Story:</label>
               <textarea required=required name="post1" class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="255" minlength="1"></textarea>

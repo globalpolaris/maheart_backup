@@ -46,3 +46,7 @@ class PostForm(FlaskForm):
 
 class DeletePost(FlaskForm):
     delete = SubmitField('Delete')
+
+class CommentForm(FlaskForm):
+    comment = StringField('Comment', validators=[DataRequired(), Length(min=1,max=255)], render_kw={'placeholder':'Your comment'})
+    submit = SubmitField('Submit')

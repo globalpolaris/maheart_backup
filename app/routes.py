@@ -1,16 +1,16 @@
 
 from app import app, fa
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm, RegistrationForm,  EditProfileForm, PostForm, DeletePost
+from app.forms import LoginForm, RegistrationForm,  EditProfileForm, PostForm, DeletePost, CommentForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User, db, Post
+from app.models import User, db, Post, Comment
 from werkzeug.urls import url_parse
 import babel
 
 @app.route('/')
 @app.route('/index')
 def index():
-    posts = Post.query.all()
+    posts = Post.query.order_by(Post.timestamp.desc())
     return render_template('index.html', title='Home', posts=posts)
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -73,6 +73,23 @@ def write():
     db.session.add(Post(body=pos, author=current_user))
     db.session.commit()
     return redirect(url_for('index'))
+
+@app.route('/post/<int:id>', methods=['GET','POST'])
+def post(id):
+    post = Post.query.get_or_404(id)
+    
+    return render_template('post.html', title='Post', post=post, id=id)
+
+@login_required
+@app.route('/post/<int:id>/comment', methods=['POST'])
+def comment(id):
+    comment = request.form.get('cmnt')
+    post = Post.query.get_or_404(id)
+    db.session.add(Comment(body=comment, author=current_user, post=post))
+    db.session.commit()
+    return redirect(url_for('post', id=id))
+
+    
 
 @app.template_filter()
 def format_datetime(value, format='medium'):

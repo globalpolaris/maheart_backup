@@ -3,18 +3,17 @@
 {% block content %}
 <link rel="stylesheet" href={{ url_for('static', filename='css/post.css') }}>
 <div class="post-popup">
-    <form action="" method="POST">
-        {{ form.csrf_token }}
-        <p>{{ form.post.label }}</p><br>
-        {{ form.post(class_='post', size=255) }}<br>
-        {{ form.submit(class_='submit') }}
-        {% for error in form.post.errors %}
-      <p class="abc" id="two" style="color: red;">{{ error }}</p>
-      <style>
-        .password {border: 1px solid red; outline:none;}
-      </style> 
-      {% endfor %}
+    {{ post.body }}
+    <form action="{{ url_for('comment', id=post.id) }}" method="POST">
+      <textarea required=required name="cmnt" class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="255" minlength="1"></textarea>
+      <button type="submit" class="btn btn-primary">Post</button>
     </form>
+    {% if post.comments  %}
+      {% for comment in post.comments %}
+        <p>{{ comment.body }}</p>
+      {% endfor %}
+    {% endif %}
+
 </div>
 {% endblock %}
 

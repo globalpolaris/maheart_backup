@@ -11,11 +11,11 @@ body {
   /* background-attachment: fixed; */
   background-size: contain;
   font-family: sans-serif;
-  background: rgb(24,203,137);
-background: -moz-linear-gradient(180deg, rgba(24,203,137,1) 30%, rgba(154,255,218,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(24,203,137,1) 30%, rgba(154,255,218,1) 100%);
-background: linear-gradient(180deg, rgba(24,203,137,1) 30%, rgba(154,255,218,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#18cb89",endColorstr="#9affda",GradientType=1);
+  background: rgb(103,177,255);
+  background: -moz-linear-gradient(176deg, rgba(103,177,255,1) 31%, rgba(216,249,255,1) 100%);
+  background: -webkit-linear-gradient(176deg, rgba(103,177,255,1) 31%, rgba(216,249,255,1) 100%);
+  background: linear-gradient(176deg, rgba(103,177,255,1) 31%, rgba(216,249,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#67b1ff",endColorstr="#d8f9ff",GradientType=1);
   overflow-y: hidden;
 }
 
@@ -29,8 +29,14 @@ nav {
   /* z-index: -1; */
 }
 
-nav h4 {
+nav a {
   margin-bottom: 0;
+  color: #f56324;
+}
+
+nav a:hover {
+  color: #f56324;
+  text-decoration: none;
 }
 
 nav .logo {

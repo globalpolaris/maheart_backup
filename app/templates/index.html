@@ -8,7 +8,7 @@ href="{{ url_for('static', filename='css/drop.css') }}" >
 <div class="wrapper">
     {% for p in posts %}
     <div class="post" data-id="{{ p.id }}">
-        <h2>{{ p.timestamp|format_datetime('full') }}</h2>
+        <a class="redirect" href="{{ url_for('post', id=p.id) }}">{{ p.timestamp|format_datetime('full') }}</a>
         {% if p.author == current_user %}
         <div class="butt btn-group">
             <!-- <button

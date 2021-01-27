@@ -3,20 +3,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   font-family: sans-serif;
   background: rgb(103,177,255);
   background: -moz-linear-gradient(176deg, rgba(103,177,255,1) 31%, rgba(216,249,255,1) 100%);
   background: -webkit-linear-gradient(176deg, rgba(103,177,255,1) 31%, rgba(216,249,255,1) 100%);
   background: linear-gradient(176deg, rgba(103,177,255,1) 31%, rgba(216,249,255,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#67b1ff",endColorstr="#d8f9ff",GradientType=1);
-  overflow-y: hidden;
+  /* overflow-y: auto; */
 }
 
 nav {
@@ -52,7 +57,7 @@ nav ul {
   list-style: none;
   align-items: center;
   width: 30%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0;
 }
 
@@ -92,10 +97,11 @@ nav .signup:hover {
 
 /*hamburger*/
 .menu-toggle {
+  margin-right: 25px;
   display: none;
   flex-direction: column;
   height: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
 }
 
@@ -114,7 +120,8 @@ nav .signup:hover {
   display: block;
   width: 28px;
   height: 3px;
-  background-color: #f6f5f5;
+  background-color: #000000;
+  opacity: .3;
   border-radius: 3px;
   transition: all 0.3s;
 }
@@ -130,11 +137,12 @@ nav .signup:hover {
 
 .menu-toggle input:checked ~ span:nth-child(2) {
   transform: rotate(45deg) translate(-1px, -1px);
+  margin-top: -3px;
   margin-left: 15px;
 }
 
 .menu-toggle input:checked ~ span:nth-child(4) {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(-1px, 0);
   margin-left: 15px;
 }
 
@@ -222,9 +230,14 @@ nav .signup:hover {
   .menu-toggle {
     display: flex;
     z-index: 3;
+    right: 10px;
   }
   .menu-toggle input {
     z-index: 1;
+  }
+
+  nav {
+    justify-content: space-between;
   }
 
   nav h4 {
@@ -240,7 +253,7 @@ nav .signup:hover {
     z-index: 2;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #070d59;
+    background-color: #acd7ff;
     transform: translateY(-100%);
   }
 
@@ -250,7 +263,7 @@ nav .signup:hover {
 
   nav ul li {
     display: flex;
-    margin: 0 0 0 -30px;
+    /* margin: 0 0 0 -30px; */
   }
 
   nav ul.slide {

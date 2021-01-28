@@ -3,19 +3,30 @@
 {% block content %}
 <link rel="stylesheet" href={{ url_for('static', filename='css/post.css') }}>
 <div class="post-popup">
-  {{ post.author.display_name }}<br>
-  {{ post.timestamp|format_datetime('full') }}<br>
-    {{ post.body }}
+  <div class="main-post">
+    <div class="display_name">
+      {{ post.author.display_name }}<br>
+    </div>
+    <div class="time">{{ post.timestamp|format_datetime('full') }}<br></div>
+    <div class="body">{{ post.body }}</div>
+
+  </div>
+  <span class="line"></span>
+  <span class="type">Comments</span>
     <form action="{{ url_for('comment', id=post.id) }}" method="POST">
       <textarea required=required name="cmnt" class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="255" minlength="1"></textarea>
       <button type="submit" class="btn btn-primary">Post</button>
     </form>
     {% if post.comments  %}
       {% for comment in post.comments %}
-        {{ comment.author.display_name }}<br>
-        {{ comment.timestamp|format_datetime('full') }}<br>
-        <p>{{ comment.body }}</p><br>
+      <div class="comment">
+        <div class="comment-name">{{ comment.author.display_name }}<br></div>
+        <div class="comment-time">{{ comment.timestamp|format_datetime('full') }}<br></div>
+        <div class="comment-body"><p>{{ comment.body }}</p><br></div>
+      </div>
       {% endfor %}
+    {% else %}
+    <p>No comments...</p>
     {% endif %}
 
 </div>
